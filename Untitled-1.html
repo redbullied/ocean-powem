@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Poem Website</title>
+
+    <!-- Google Font: Pacifico -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Pacifico', cursive; /* Apply the Pacifico font */
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .poem p {
+            font-size: 1.2rem; /* Smaller text size */
+            color: blue; /* Default blue color for the text */
+            line-height: 1.6; /* Adjust line height for readability */
+            margin-bottom: 20px; /* Add spacing between paragraphs */
+        }
+
+        .poem .light-blue {
+            color: lightblue; /* Light blue color for the last 3 paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="ocean.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Foreground Content -->
+    <div class="content">
+        <div class="poem">
+            <p>beneath the weight of the early morning light,<br>
+               everything is slow,<br>
+               as if the world was caught in a deep breath waiting to be exhaled.
+            </p>
+
+            <p>the sky, stretching out endlessly,<br>
+               is not blue, nor gray,<br>
+               but just a soft smear of color that fades in every direction,<br>
+               dissolving into the horizon where the sea lies still.
+            </p>
+
+            <p>the ocean sings,<br>
+               not with sound,<br>
+               but with the movement of its waves pushing and pulling,<br>
+               its always present but each sound will never be the same.
+            </p>
+
+            <p>The sand I stand on is cool,<br>
+               damp from the night and the ocean,<br>
+               each step leaving behind an indent in the ground,<br>
+               an indent that will be soon washed away.
+            </p>
+
+            <p>the wind, brushing against my skin like a memory that is almost lost,<br>
+               but still lingers,<br>
+               the heartbeat of the sea, the pulse of the wind, the quiet shuffle of the sand,<br>
+               all blending into one continuous flow.
+            </p>
+
+            <p>the clouds, barely there, thin, stretched out,<br>
+               almost transparent as they drift across the wide expanse of the sky,<br>
+               unhurried, unshaped, like thoughts passing.
+            </p>
+
+            <p class="light-blue">time itself feels different,<br>
+               slower, stretched out,<br>
+               as if the world has forgotten the rush and business of the day,<br>
+               suspended in the soft breath of the morning.
+            </p>
+
+            <!-- Last three paragraphs with light blue text -->
+            <p class="light-blue">it is that in this place,<br>
+               this moment,<br>
+               that boundaries blur.
+            </p>
+
+            <p class="light-blue">the line between the sky and the sea,<br>
+               earth and air,<br>
+               all dissolving into the soft edges of the morning.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Ensures autoplay is triggered on page load
+        window.addEventListener('load', function() {
+            const video = document.getElementById('background-video');
+            video.play();
+        });
+    </script>
+</body>
+</html>
